@@ -1,0 +1,72 @@
+label
+  font-weight: bold
+  user-select: none
+  cursor: pointer
+
+input[type="radio"], input[type="checkbox"]
+  cursor: pointer
+
+fieldset
+  padding-left: 1rem
+
+  legend
+    text-transform: capitalize
+    color: $gray-600
+    margin-left: -1rem
+
+  &[disabled]
+    cursor: not-allowed
+
+    label, input
+      cursor: not-allowed
+
+input[disabled]
+  cursor: not-allowed
+
+.form-switch
+  label
+    font-size: .75rem
+
+    &:not( [data-active] )
+      color: $gray-400
+
+  .form-check-input
+    float: none
+    margin: 0 $spacer*.5
+    vertical-align: middle
+    background-color: rgba(0, 0, 0, .25)
+
+    &:checked
+      border-color: $orange-400
+      background-color: $orange-400
+
+  &[data-disabled]
+    cursor: not-allowed
+
+    label
+      opacity: $form-check-input-disabled-opacity
+      cursor: not-allowed
+
+.alert
+  color: $black
+
+  p:last-child
+    margin-bottom: 0
+
+.tooltip
+  left: 100px !important
+
+  &-inner
+    font-size: .8rem
+    font-weight: bold
+    width: 200px
+    line-height: 1.2
+
+    padding: 1em
+
+  &-arrow
+    transform: translateX(0) !important
+
+    .bs-tooltip-bottom &:before
+      border-left-color: $tooltip-bg
+      border-width: $tooltip-arrow-height / 2
